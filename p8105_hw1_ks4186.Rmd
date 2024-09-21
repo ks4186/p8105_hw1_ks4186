@@ -9,7 +9,7 @@ output: github_document
 library(tidyverse)
 ```
 
-##Problem 1
+## Problem 1
 
 
 ```{r data import}
@@ -36,5 +36,17 @@ The mean flipper length is 200.9152 mm.
 ```{r plot}
 ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
 ggsave("flipper_vs_bill_scatterplot.png")
+```
+
+
+## Problem 2
+```{r}
+problem2_df = tibble (
+  vec_number = rnorm(10),
+  vec_logical = vec_number > 0,
+  char_vec = c("A", "B", "C", "D", "E", "F", "G", "H", "I", "J"),
+  factor_vec = factor(c("level1","level1","level1","level2","level2","level2","level2","level3","level3","level3"))
+)
+view(problem2_df)
 ```
 
